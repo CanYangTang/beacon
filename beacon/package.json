@@ -1,0 +1,29 @@
+{
+  "name": "beacon",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "format": "prettier --write \"packages/**/*.{ts,tsx}\"",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:seed": "pnpm --filter @beacon/server exec tsx scripts/seed.ts"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "playwright": "^1.60.0",
+    "prettier": "^3.4.0",
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0"
+  }
+}
